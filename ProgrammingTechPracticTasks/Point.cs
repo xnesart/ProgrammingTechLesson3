@@ -9,13 +9,10 @@ namespace ProgrammingTechPracticTasks
         public double CoordinatesX;
         public double CoordinatesY;
 
-        public double DistanceFromStart;
-
         public Point(double coordinatesX, double coordinatesY)
         {
-            CoordinatesX = coordinatesX;
-            CoordinatesY = coordinatesY;
-            DistanceFromStart = 0;
+            this.CoordinatesX = coordinatesX;
+            this.CoordinatesY = coordinatesY;
         }
 
         /// <summary>
@@ -24,7 +21,13 @@ namespace ProgrammingTechPracticTasks
         /// <returns></returns>
         public double Distance()
         {
-            return Math.Sqrt(Math.Pow(CoordinatesX, 2) + Math.Pow(CoordinatesY, 2));
+            return Math.Sqrt(Math.Pow(CoordinatesX - 0, 2) + Math.Pow(CoordinatesY - 0, 2));
+        }
+
+        public double Distance(Point point)
+        {
+            return Math.Sqrt(Math.Pow(CoordinatesX - point.CoordinatesX, 2) +
+                             Math.Pow(CoordinatesY - point.CoordinatesY, 2));
         }
     }
 }

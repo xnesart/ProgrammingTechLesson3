@@ -8,21 +8,20 @@ namespace ProgrammingTechPracticTasks
         {
             //Задание 1. Точка
             Console.WriteLine("задание 1");
-            Point somePoint = new Point(2, 2);
+            Point somePoint = new Point(3, 2);
             double pointResult = somePoint.Distance();
             Console.WriteLine("Расстояние точки от начала координат = " + pointResult);
             //Задание 2. Линия
             Console.WriteLine("задание 2");
-            Point point1 = new Point(2, 2);
-            Point point2 = new Point(1, 3);
+            Point point1 = new Point(5, 2);
+            Point point2 = new Point(1, 2);
             Line line = new Line(point1, point2);
-            double length = line.GetLength();
-            Console.WriteLine("Длина линии = " + length);
-            Console.WriteLine("принадлежность точки отрезку = " + line.isBelong(somePoint, point1, point2));
+            Console.WriteLine("Длина линии = " + line.Length());
+            Console.WriteLine("принадлежность точки отрезку = " + line.isBelongAtLine(somePoint));
             //Задание 3. Квадрат
             Console.WriteLine("задание 3");
-            Point squarePoint = new Point(5, 5);
-            Square square = new Square(squarePoint, 3);
+            Point squarePoint = new Point(3, 3);
+            Square square = new Square(squarePoint, 2);
             double perimeter = square.getPerimeter();
             double getSquare = square.getSquare();
             Console.WriteLine("площадь квадрата = " + getSquare);

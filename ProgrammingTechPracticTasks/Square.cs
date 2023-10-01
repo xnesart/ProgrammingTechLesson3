@@ -17,7 +17,7 @@ namespace ProgrammingTechPracticTasks
         /// <returns></returns>
         public double getSquare()
         {
-            return sideLength.GetLength() * sideLength.GetLength();
+            return sideLength.Length() * sideLength.Length();
         }
         /// <summary>
         /// вычисляет периметр квадрата
@@ -25,7 +25,7 @@ namespace ProgrammingTechPracticTasks
         /// <returns></returns>
         public double getPerimeter()
         {
-            return 4 * sideLength.GetLength();
+            return 4 * sideLength.Length();
         }
     }
 }
